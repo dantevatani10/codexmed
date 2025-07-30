@@ -1,0 +1,8 @@
+{
+  "name": "MEDM8",
+  "short_name": "MEDM8",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "icons": []
+}

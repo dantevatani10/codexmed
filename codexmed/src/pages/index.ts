@@ -1,5 +1,4 @@
-export { default as Dashboard } from './Dashboard'
-export { default as Patients } from './Patients'
-export { default as Appointments } from './Appointments'
-export { default as Reports } from './Reports'
 export { default as Landing } from './Landing'
+export { default as Login } from './Login'
+export { default as Register } from './Register'
+export { default as ForgotPassword } from './ForgotPassword'
