@@ -9,9 +9,11 @@ import { Link as RouterLink } from 'react-router-dom'
 type Props = {
   /** Display landing links when true */
   landing?: boolean
+  /** Minimal variant for auth pages */
+  auth?: boolean
 }
 
-const Navbar = ({ landing }: Props) => (
+const Navbar = ({ landing, auth }: Props) => (
   <AppBar position="sticky" color="transparent" elevation={landing ? 0 : 4}>
     <Toolbar sx={{ justifyContent: 'space-between' }}>
       <Typography variant="h6" component="div">
@@ -46,6 +48,10 @@ const Navbar = ({ landing }: Props) => (
             Registrarse
           </Button>
         </Stack>
+      ) : auth ? (
+        <Link component={RouterLink} to="/" color="inherit" underline="none">
+          Volver al inicio
+        </Link>
       ) : (
         <Button color="inherit">Salir</Button>
       )}

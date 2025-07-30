@@ -7,8 +7,8 @@ interface AuthState {
 }
 
 interface AuthContextProps extends AuthState {
-  login: (email: string, password: string) => void
-  register: (email: string, password: string) => void
+  login: (email: string, password: string) => Promise<void>
+  register: (email: string, password: string) => Promise<void>
   logout: () => void
 }
 
@@ -17,12 +17,12 @@ const AuthContext = createContext<AuthContextProps>(null as never)
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [state, setState] = useState<AuthState>({})
 
-  const login = (_email: string, _password: string) => {
+  const login = async (_email: string, _password: string) => {
     // TODO: call api
     setState({ token: 'fake', role: 'admin' })
   }
 
-  const register = () => {
+  const register = async () => {
     // TODO
   }
 
