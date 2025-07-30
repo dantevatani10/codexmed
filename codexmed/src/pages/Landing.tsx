@@ -1,7 +1,14 @@
 import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
-import HeroSection from '../components/landing/HeroSection'
-import FeaturesSection from '../components/landing/FeaturesSection'
+import Navbar from '../components/common/Navbar'
+import Hero from '../components/landing/Hero'
+import Features from '../components/landing/Features'
+import Benefits from '../components/landing/Benefits'
+import HowItWorks from '../components/landing/HowItWorks'
+import Pricing from '../components/landing/Pricing'
+import Testimonials from '../components/landing/Testimonials'
+import FAQ from '../components/landing/FAQ'
+import FinalCTA from '../components/landing/FinalCTA'
 import Footer from '../components/landing/Footer'
 
 /**
@@ -11,9 +18,20 @@ import Footer from '../components/landing/Footer'
 export default function Landing() {
   return (
     <Box>
+      <Navbar landing />
       <Container maxWidth="lg">
-        <HeroSection />
-        <FeaturesSection />
+        <Box id="hero">
+          <Hero />
+        </Box>
+        <Box id="features">
+          <Features />
+        </Box>
+        <Benefits />
+        <HowItWorks />
+        <Pricing />
+        <Testimonials />
+        <FAQ />
+        <FinalCTA />
       </Container>
       <Footer />
     </Box>

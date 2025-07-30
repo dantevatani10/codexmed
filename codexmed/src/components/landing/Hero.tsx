@@ -6,7 +6,7 @@ import { Link as RouterLink } from 'react-router-dom'
 /**
  * Hero section with main headline and call to action.
  */
-const HeroSection = () => (
+const Hero = () => (
   <Box
     sx={{
       display: 'flex',
@@ -35,4 +35,4 @@ const HeroSection = () => (
   </Box>
 )
 
-export default HeroSection
+export default Hero

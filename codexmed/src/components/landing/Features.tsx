@@ -15,7 +15,7 @@ const features = [
 /**
  * Simple grid with key features.
  */
-const FeaturesSection = () => (
+const Features = () => (
   <Box sx={{ py: { xs: 6, md: 10 } }}>
     <Typography variant="h4" component="h2" align="center" gutterBottom>
       Funcionalidades principales
@@ -31,4 +31,4 @@ const FeaturesSection = () => (
   </Box>
 )
 
-export default FeaturesSection
+export default Features
