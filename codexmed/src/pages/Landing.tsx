@@ -1,20 +1,39 @@
 import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
-import { Link as RouterLink } from 'react-router-dom'
+import Box from '@mui/material/Box'
+import Navbar from '../components/common/Navbar'
+import Hero from '../components/landing/Hero'
+import Features from '../components/landing/Features'
+import Benefits from '../components/landing/Benefits'
+import HowItWorks from '../components/landing/HowItWorks'
+import Pricing from '../components/landing/Pricing'
+import Testimonials from '../components/landing/Testimonials'
+import FAQ from '../components/landing/FAQ'
+import FinalCTA from '../components/landing/FinalCTA'
+import Footer from '../components/landing/Footer'
 
+/**
+ * Public landing page describing the application.
+ * Combines a hero, features and footer.
+ */
 export default function Landing() {
   return (
-    <Container sx={{ textAlign: 'center', py: 8 }}>
-      <Typography variant="h3" gutterBottom>
-        Bienvenido a MEDM8
-      </Typography>
-      <Typography variant="h6" gutterBottom>
-        Gestiona tu consultorio de manera eficiente y moderna.
-      </Typography>
-      <Button component={RouterLink} to="/dashboard" variant="contained" color="primary">
-        Entrar
-      </Button>
-    </Container>
+    <Box>
+      <Navbar landing />
+      <Container maxWidth="lg">
+        <Box id="hero">
+          <Hero />
+        </Box>
+        <Box id="features">
+          <Features />
+        </Box>
+        <Benefits />
+        <HowItWorks />
+        <Pricing />
+        <Testimonials />
+        <FAQ />
+        <FinalCTA />
+      </Container>
+      <Footer />
+    </Box>
   )
 }
